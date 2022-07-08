@@ -3,25 +3,30 @@
     <ul class="nav__wrapper">
       <li class="nav__item">
         <!-- prettier-ignore -->
-        <a href="#hero" class="hero active"><font-awesome-icon class="nav-icon" icon="fa-solid fa-display" /> Start</a>
+        <a href="#hero" class="hero active"><font-awesome-icon class="nav-icon" icon="fa-solid fa-display" /> {{ home }} </a>
       </li>
       <li class="nav__item">
         <!-- prettier-ignore -->
-        <a href="#about" class="about"><font-awesome-icon class="nav-icon" icon="fa-solid fa-user" /> Über mich</a>
+        <a href="#about" class="about"><font-awesome-icon class="nav-icon" icon="fa-solid fa-user" /> {{ about }} </a>
       </li>
       <li class="nav__item">
         <!-- prettier-ignore -->
-        <a href="#portfolio" class="portfolio"><font-awesome-icon class="nav-icon" icon="fa-solid fa-code" /> Mein Portfolio</a>
+        <a href="#portfolio" class="portfolio"><font-awesome-icon class="nav-icon" icon="fa-solid fa-code" /> {{ portfolio }} </a>
       </li>
       <li class="nav__item">
         <!-- prettier-ignore -->
-        <a href="#contact" class="contact"><font-awesome-icon class="nav-icon" icon="fa-regular fa-address-card" /> Kontakt</a>
+        <a href="#contact" class="contact"><font-awesome-icon class="nav-icon" icon="fa-regular fa-address-card" /> {{ contact }} </a>
       </li>
     </ul>
   </nav>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const home = 'Start'
+const about = 'Über mich'
+const portfolio = 'Mein Portfolio'
+const contact = 'Kontakt'
+</script>
 
 <style lang="scss" scoped>
 .nav {
