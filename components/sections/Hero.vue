@@ -22,7 +22,7 @@
 .hero-section {
   width: 100%;
   height: 80vh;
-  background-image: url('~/img/Hero-Background.webp');
+  background-image: url('/img/Hero-Background.webp');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
