@@ -43,7 +43,7 @@ onMounted(() => {
 
 * {
   box-sizing: border-box;
-  transition: all 0.3s;
+  //transition: all 0.3s;
 }
 html {
   scroll-behavior: smooth;

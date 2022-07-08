@@ -41,6 +41,7 @@
   .icon {
     font-size: 4rem;
     color: $color_main;
+    transition: all 0.3s;
   }
 
   .header_img {

@@ -38,19 +38,23 @@
         <tooltip title="telefon" position="top">
           <font-awesome-icon icon="fa-solid fa-phone" />
         </tooltip>
-        <a href="tel:+4915172745427" class="color-link"> +49 151 72 74 54 27</a>
+        <a href="tel:+4915172745427" class="color-link link-active">
+          +49 151 72 74 54 27</a
+        >
       </div>
       <div class="detail color-main">
         <tooltip title="Email" position="left">
           <font-awesome-icon icon="fa-solid fa-envelope" />
         </tooltip>
-        <a href="mailto:mknoll1901@gmail.com" class="color-link"> mknoll1901@gmail.com</a>
+        <a href="mailto:mknoll1901@gmail.com" class="color-link link-active">
+          mknoll1901@gmail.com</a
+        >
       </div>
       <div class="detail color-main">
         <tooltip title="github">
           <font-awesome-icon icon="fa-solid fa-link" />
         </tooltip>
-        <a href="https://github.com/momoathome" class="color-link">
+        <a href="https://github.com/momoathome" class="color-link link-active">
           Github.com/momoathome</a
         >
       </div>
@@ -71,6 +75,14 @@ h5 {
 }
 a {
   color: $color_grey;
+}
+.link-active {
+  position: relative;
+  transition: all 0.3s;
+
+  &:hover {
+    color: $color_main;
+  }
 }
 
 .about-text {

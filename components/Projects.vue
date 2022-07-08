@@ -16,7 +16,7 @@
       target="_blank"
       rel="noopener noreferrer"
     >
-      <div class="item div3">
+      <div class="item div2">
         <img src="/img/Pokedex.webp" alt="" />
         <div class="overlay">
           <p class="item-title">Pokedex</p>
@@ -31,7 +31,7 @@
       target="_blank"
       rel="noopener noreferrer"
     >
-      <div class="item div2">
+      <div class="item div3">
         <img src="/img/Project-ciara.webp" alt="" />
         <div class="overlay">
           <p class="item-title">Project Ciara</p>
@@ -41,8 +41,15 @@
       </div>
     </a>
 
-    <a href="">
-      <div class="item div4"></div>
+    <a href="/">
+      <div class="item div4">
+        <img src="/img/Portfolio.webp" alt="" />
+        <div class="overlay">
+          <p class="item-title">Portfolio Website</p>
+          <p class="item-category">Solo Projekt: Frontend</p>
+          <p class="item-text">Techstack: Nuxt.js, Vue.js, Scss</p>
+        </div>
+      </div>
     </a>
   </div>
 </template>
@@ -61,8 +68,8 @@ img {
   row-gap: 2rem;
 }
 .overlay {
-  margin-top: 1rem;
   color: $color_grey;
+  transition: all 0.3s;
 
   .item-title {
     color: $color_main;
@@ -84,6 +91,7 @@ img {
     width: 60%;
     height: auto;
     border: 9px solid $color_darker;
+    margin-top: 0;
   }
 }
 
@@ -132,7 +140,7 @@ img {
       .item-text {
         display: flex;
         justify-content: center;
-        top: 62%;
+        top: 63%;
         color: $color_main;
         visibility: visible;
         opacity: 1;
@@ -166,6 +174,7 @@ img {
     transform: translateX(-50%);
     visibility: hidden;
     opacity: 0;
+    transition: all 0.3s;
   }
 }
 

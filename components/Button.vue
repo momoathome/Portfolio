@@ -16,6 +16,7 @@
   border-radius: 9999px;
   font-size: 1.25rem;
   cursor: pointer;
+  transition: all 0.3s;
 
   &:focus-visible {
     outline: 2px solid $color_white;
