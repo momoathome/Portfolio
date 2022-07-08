@@ -1,6 +1,10 @@
 <template>
   <div class="grid">
-    <NuxtLink to="https://demo.novis-cms.com/" target="_blank" rel="noopener noreferrer">
+    <NuxtLink
+      href="https://demo.novis-cms.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <div class="item div1">
         <img src="/img/Novis-cms.webp" alt="" />
         <div class="overlay">
@@ -12,7 +16,7 @@
     </NuxtLink>
 
     <NuxtLink
-      to="https://momoathome.github.io/Pokedex/"
+      href="https://momoathome.github.io/Pokedex/"
       target="_blank"
       rel="noopener noreferrer"
     >
@@ -27,7 +31,7 @@
     </NuxtLink>
 
     <NuxtLink
-      to="https://momoathome.github.io/projektCiara/"
+      href="https://momoathome.github.io/projektCiara/"
       target="_blank"
       rel="noopener noreferrer"
     >
@@ -41,7 +45,7 @@
       </div>
     </NuxtLink>
 
-    <NuxtLink to="/">
+    <NuxtLink href="/">
       <div class="item div4">
         <img src="/img/Portfolio.webp" alt="" />
         <div class="overlay">

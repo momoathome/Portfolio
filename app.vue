@@ -14,8 +14,6 @@ import {ref, onMounted} from 'vue'
 // smooth scroll on click at Nav Link
 const root = ref(null)
 onMounted(() => {
-  console.log(root.value)
-
   const sections = root.value.querySelectorAll('section')
   const navLi = root.value.querySelectorAll('nav a')
   window.onscroll = () => {
