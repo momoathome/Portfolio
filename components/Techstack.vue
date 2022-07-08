@@ -1,6 +1,5 @@
 <template>
   <div class="techstack-container">
-    <div></div>
     <div class="techstack">
       <p>Techstack</p>
       <div class="icons">
@@ -58,7 +57,6 @@
         </Tooltip>
       </div>
     </div>
-    <div></div>
   </div>
 </template>
 
@@ -67,16 +65,28 @@
 <style lang="scss" scoped>
 .techstack-container {
   display: grid;
-  grid-template-columns: 28% 1fr 1fr 1fr; // responsive gestalten
+  grid-template-columns: 1fr;
 
   p {
     margin-bottom: 1rem;
   }
 }
 
+@media (min-width: 768px) {
+  .techstack-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .techstack-container {
+    margin-inline-start: 7%;
+  }
+}
 .icons {
   display: flex;
   gap: 1rem;
+  margin-bottom: 1rem;
 
   & * {
     width: 32px;
@@ -86,6 +96,12 @@
     &:hover {
       transform: translateY(-0.25rem);
     }
+  }
+}
+
+@media (min-width: 1200px) {
+  .techstack-container {
+    grid-template-columns: 38% 1fr 1fr;
   }
 }
 </style>

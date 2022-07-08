@@ -47,11 +47,19 @@ async function copy(s) {
 </script>
 
 <style lang="scss" scoped>
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  margin-top: 6rem;
-  margin-bottom: 2rem;
+@media (min-width: 768px) {
+  .grid {
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 6rem;
+    margin-bottom: 2rem;
+  }
 }
 </style>

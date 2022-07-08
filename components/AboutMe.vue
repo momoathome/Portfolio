@@ -13,47 +13,47 @@
   </p>
   <hr />
   <div class="details-container">
-    <div>
-      <p class="color-main">
+    <div class="details-block col-1">
+      <div class="detail color-main">
         <tooltip title="über mich" position="top">
           <font-awesome-icon icon="fa-solid fa-user" />
         </tooltip>
         <span> Maurice Knoll - 26</span>
-      </p>
-      <p class="color-main">
+      </div>
+      <div class="detail color-main">
         <tooltip title="Wohnort" position="left">
           <font-awesome-icon icon="fa-solid fa-location-dot" />
         </tooltip>
         <span> Bayern, Deutschland</span>
-      </p>
-      <p class="color-main">
+      </div>
+      <div class="detail color-main">
         <tooltip title="Sprachen">
           <font-awesome-icon icon="fa-solid fa-language" />
         </tooltip>
         <span> Deutsch, Englisch</span>
-      </p>
+      </div>
     </div>
-    <div>
-      <p class="color-main">
+    <div class="details-block col-2">
+      <div class="detail color-main">
         <tooltip title="telefon" position="top">
           <font-awesome-icon icon="fa-solid fa-phone" />
         </tooltip>
         <a href="tel:+4915172745427" class="color-link"> +49 151 72 74 54 27</a>
-      </p>
-      <p class="color-main">
+      </div>
+      <div class="detail color-main">
         <tooltip title="Email" position="left">
           <font-awesome-icon icon="fa-solid fa-envelope" />
         </tooltip>
         <a href="mailto:mknoll1901@gmail.com" class="color-link"> mknoll1901@gmail.com</a>
-      </p>
-      <p class="color-main">
+      </div>
+      <div class="detail color-main">
         <tooltip title="github">
           <font-awesome-icon icon="fa-solid fa-link" />
         </tooltip>
         <a href="https://github.com/momoathome" class="color-link">
           Github.com/momoathome</a
         >
-      </p>
+      </div>
     </div>
   </div>
 </template>
@@ -71,27 +71,60 @@ h5 {
 }
 a {
   color: $color_grey;
-  text-decoration: none;
 }
 
 .about-text {
   color: $color_grey;
-  max-width: 600px;
+  max-width: 75ch;
   margin-bottom: 1rem;
   line-height: 1.5;
 }
 .details-container {
-  display: flex;
-  justify-content: space-between;
-  max-width: 600px;
+  display: grid;
+  grid-template-columns: 1fr;
+}
 
-  p span,
+.details-block {
+  & > div {
+    margin-bottom: 1rem;
+  }
+
+  & span,
   a {
     margin-left: 10px;
   }
+}
 
-  p:not(:last-child) {
-    margin-bottom: 1rem;
+.col-2 {
+  .detail:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.section-heading {
+  padding-top: 3rem;
+}
+
+@media (min-width: 768px) {
+  .details-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .col-1,
+  .col-2 {
+    .detail:last-of-type {
+      margin-bottom: 3rem;
+    }
+  }
+}
+@media (min-width: 1024px) {
+  .section-heading {
+    padding-top: 0;
+  }
+
+  .about-text {
+    max-width: 70ch;
   }
 }
 </style>

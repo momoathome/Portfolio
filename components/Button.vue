@@ -8,8 +8,8 @@
 
 <style lang="scss" scoped>
 .btn {
-  width: 170px;
-  padding: 14px 0;
+  width: 140px;
+  padding: 10px 0;
   background-color: $color_main;
   color: $color_white;
   border: none;
@@ -25,7 +25,6 @@
   background-color: transparent;
   border: 1px solid $color_main;
   color: $color_main;
-  transition: all 0.5s;
 
   &:hover {
     background-color: $color_main;
@@ -45,5 +44,12 @@
   padding: 6px;
   font-size: 0.75rem;
   border-radius: 0;
+}
+
+@media (min-width: 768px) {
+  .btn {
+    width: 170px;
+    padding: 14px 0;
+  }
 }
 </style>

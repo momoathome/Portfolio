@@ -15,18 +15,24 @@
 
 <style lang="scss" scoped>
 .navigation {
-  position: fixed;
-  top: 45%;
-  left: 1%;
-  display: flex;
-  flex-direction: column;
-  font-size: 14px;
+  display: none;
 }
+
+@media (min-width: 1024px) {
+  .navigation {
+    position: fixed;
+    top: 45%;
+    left: 1%;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+  }
+}
+
 a {
   color: $color_white;
   text-decoration: none;
   margin: 0.7rem;
-  transition: all 0.3s;
   &:hover {
     color: $color_main;
     .nav-icon {
@@ -35,7 +41,6 @@ a {
   }
 }
 .nav-icon {
-  transition: all 0.3s;
   color: $color_white;
   width: 18px;
   height: 18px;

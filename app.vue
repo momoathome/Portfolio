@@ -11,6 +11,7 @@
 <script setup lang="ts">
 import {ref, onMounted} from 'vue'
 
+// smooth scroll on click at Nav Link
 const root = ref(null)
 onMounted(() => {
   console.log(root.value)
@@ -40,12 +41,38 @@ onMounted(() => {
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700&display=swap');
 
+* {
+  box-sizing: border-box;
+  transition: all 0.3s;
+}
 html {
   scroll-behavior: smooth;
 }
 body {
   margin: 0;
   font-family: 'Roboto Slab', serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-column-gap: 5rem;
+  height: 100%;
 }
 
 .color-main {
@@ -85,21 +112,16 @@ body {
 
 .section {
   width: 100%;
-  height: 90vh;
+  min-height: 100vh;
   background-color: $color_dark;
   color: $color_white;
-  padding-top: 7rem;
-}
-
-.container {
-  max-width: 935px;
-  align-content: center;
-  margin: auto;
+  padding-top: 4rem;
 }
 
 hr {
   border-color: $color_main_darker;
   margin-block: 2rem;
+  width: 100%;
 }
 
 h1,
@@ -111,6 +133,11 @@ h6,
 p {
   margin: 0;
 }
+
+/* * {
+  outline: 1px solid lime;
+  outline-offset: -1px;
+} */
 
 /* ===== Scrollbar CSS ===== */
 /* Firefox */
@@ -132,5 +159,14 @@ p {
   background-color: #16c0f0;
   border-radius: 10px;
   border: 0px none #16c0f0;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1140px;
+  }
+  .section {
+    padding-top: 7rem;
+  }
 }
 </style>
