@@ -15,20 +15,7 @@ export default defineNuxtConfig({
     },
 },
 modules: [
-  /* '@nuxtjs/axios',
-  ['nuxt-mail', {
-    message: {
-      to: 'mknoll1901@gmail.com',
-    },
-    smtp: {
-      host: 'smtp.mailtrap.io',
-      port: 2525,
-      auth: {
-        user: 'username',
-        pass: 'password'
-      },
-    },
-  }], */
+  
 ],
 
 plugins: [

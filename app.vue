@@ -1,6 +1,8 @@
 <template>
-  <main ref="root">
+  <header ref="header">
     <TheNavigation />
+  </header>
+  <main ref="root">
     <SectionsHero />
     <SectionsAbout />
     <SectionsPortfolio />
@@ -13,9 +15,11 @@ import {ref, onMounted} from 'vue'
 
 // smooth scroll on click at Nav Link
 const root = ref(null)
+const header = ref(null)
+
 onMounted(() => {
   const sections = root.value.querySelectorAll('section')
-  const navLi = root.value.querySelectorAll('nav a')
+  const navLi = header.value.querySelectorAll('nav a')
   window.onscroll = () => {
     let current = ''
 
