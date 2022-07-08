@@ -39,8 +39,6 @@
 </template>
 
 <script setup>
-const email = 'mknoll1901@gmail.com'
-
 async function copy(s) {
   await navigator.clipboard.writeText(s)
 }

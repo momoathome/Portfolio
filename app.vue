@@ -19,7 +19,7 @@ const header = ref(null)
 
 onMounted(() => {
   const sections = root.value.querySelectorAll('section')
-  const navLi = header.value.querySelectorAll('nav a')
+  const navLi = header.value.querySelectorAll('nav li')
   window.onscroll = () => {
     let current = ''
 
@@ -30,10 +30,10 @@ onMounted(() => {
       }
     })
 
-    navLi.forEach((a) => {
-      a.classList.remove('active')
-      if (a.classList.contains(current)) {
-        a.classList.add('active')
+    navLi.forEach((el) => {
+      el.classList.remove('active')
+      if (el.classList.contains(current)) {
+        el.classList.add('active')
       }
     })
   }
