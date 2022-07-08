@@ -1,6 +1,6 @@
 <template>
   <div class="grid">
-    <a href="https://demo.novis-cms.com/" target="_blank" rel="noopener noreferrer">
+    <NuxtLink to="https://demo.novis-cms.com/" target="_blank" rel="noopener noreferrer">
       <div class="item div1">
         <img src="/img/Novis-cms.webp" alt="" />
         <div class="overlay">
@@ -9,10 +9,10 @@
           <p class="item-text">Techstack: Laravel, Sass, Bootsrap</p>
         </div>
       </div>
-    </a>
+    </NuxtLink>
 
-    <a
-      href="https://momoathome.github.io/Pokedex/"
+    <NuxtLink
+      to="https://momoathome.github.io/Pokedex/"
       target="_blank"
       rel="noopener noreferrer"
     >
@@ -24,10 +24,10 @@
           <p class="item-text">Techstack: Vue.js, Scss, PokeApi</p>
         </div>
       </div>
-    </a>
+    </NuxtLink>
 
-    <a
-      href="https://momoathome.github.io/projektCiara/"
+    <NuxtLink
+      to="https://momoathome.github.io/projektCiara/"
       target="_blank"
       rel="noopener noreferrer"
     >
@@ -39,9 +39,9 @@
           <p class="item-text">Techstack: Html, Scss, Javascript</p>
         </div>
       </div>
-    </a>
+    </NuxtLink>
 
-    <a href="/">
+    <NuxtLink to="/">
       <div class="item div4">
         <img src="/img/Portfolio.webp" alt="" />
         <div class="overlay">
@@ -50,7 +50,7 @@
           <p class="item-text">Techstack: Nuxt.js, Vue.js, Scss</p>
         </div>
       </div>
-    </a>
+    </NuxtLink>
   </div>
 </template>
 

@@ -1,13 +1,13 @@
 <template>
   <nav class="navigation">
     <!-- prettier-ignore -->
-    <a href="#hero" class="hero active"><font-awesome-icon class="nav-icon" icon="fa-solid fa-display" />Start</a>
+    <NuxtLink to="#hero" class="hero active"><font-awesome-icon class="nav-icon" icon="fa-solid fa-display" />Start </NuxtLink>
     <!-- prettier-ignore -->
-    <a href="#about" class="about"><font-awesome-icon class="nav-icon" icon="fa-solid fa-user" />Über mich</a>
+    <NuxtLink to="#about" class="about"><font-awesome-icon class="nav-icon" icon="fa-solid fa-user" />Über mich</NuxtLink>
     <!-- prettier-ignore -->
-    <a href="#portfolio" class="portfolio"><font-awesome-icon class="nav-icon" icon="fa-solid fa-code" />Mein Portfolio</a>
+    <NuxtLink to="#portfolio" class="portfolio"><font-awesome-icon class="nav-icon" icon="fa-solid fa-code" />Mein Portfolio</NuxtLink>
     <!-- prettier-ignore -->
-    <a href="#contact" class="contact"><font-awesome-icon class="nav-icon" icon="fa-regular fa-address-card" />Kontakt</a>
+    <NuxtLink to="#contact" class="contact"><font-awesome-icon class="nav-icon" icon="fa-regular fa-address-card" />Kontakt</NuxtLink>
   </nav>
 </template>
 
