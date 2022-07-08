@@ -1,13 +1,13 @@
 <template>
   <nav class="navigation">
     <!-- prettier-ignore -->
-    <a href="#hero" class="hero active"><font-awesome-icon class="nav-icon" icon="fa-solid fa-display" /> Start </a>
+    <a href="#hero" class="hero active"><font-awesome-icon class="nav-icon" icon="fa-solid fa-display" /> <span>Start</span></a>
     <!-- prettier-ignore -->
-    <a href="#about" class="about"><font-awesome-icon class="nav-icon" icon="fa-solid fa-user" /> Über mich </a>
+    <a href="#about" class="about"><font-awesome-icon class="nav-icon" icon="fa-solid fa-user" /> <span>Über mich</span></a>
     <!-- prettier-ignore -->
-    <a href="#portfolio" class="portfolio"><font-awesome-icon class="nav-icon" icon="fa-solid fa-code" /> Mein Portfolio </a>
+    <a href="#portfolio" class="portfolio"><font-awesome-icon class="nav-icon" icon="fa-solid fa-code" /> <span>Mein Portfolio</span></a>
     <!-- prettier-ignore -->
-    <a href="#contact" class="contact"><font-awesome-icon class="nav-icon" icon="fa-regular fa-address-card" /> Kontakt </a>
+    <a href="#contact" class="contact"><font-awesome-icon class="nav-icon" icon="fa-regular fa-address-card" /> <span>Kontakt</span></a>
   </nav>
 </template>
 
