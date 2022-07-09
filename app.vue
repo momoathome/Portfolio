@@ -19,7 +19,7 @@ const header = ref(null)
 
 onMounted(() => {
   const sections = root.value.querySelectorAll('section')
-  const navLi = header.value.querySelectorAll('nav li')
+  const navLi = header.value.querySelectorAll('nav a')
   window.onscroll = () => {
     let current = ''
 

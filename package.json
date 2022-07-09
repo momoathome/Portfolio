@@ -4,12 +4,14 @@
   "private": false,
   "scripts": {
     "dev": "nuxt dev",
-    "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup",
+    "build": "nuxt build"
   },
   "devDependencies": {
     "nuxt": "3.0.0-rc.4",
+    "push-dir": "^0.4.1",
     "sass": "^1.53.0",
     "sass-loader": "^13.0.2"
   },

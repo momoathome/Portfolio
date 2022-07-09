@@ -1,25 +1,21 @@
 <template>
   <nav class="nav">
     <ul class="nav__wrapper">
-      <li class="nav__item hero active">
+      <li class="nav__item">
         <!-- prettier-ignore -->
-        <font-awesome-icon class="nav-icon" icon="fa-solid fa-display" />
-        <a href="#hero"> {{ home }} </a>
+        <a href="#hero" class="hero active"><font-awesome-icon class="nav-icon" icon="fa-solid fa-display" /> {{ home }} </a>
       </li>
-      <li class="nav__item about">
+      <li class="nav__item">
         <!-- prettier-ignore -->
-        <font-awesome-icon class="nav-icon" icon="fa-solid fa-user" />
-        <a href="#about"> {{ about }} </a>
+        <a href="#about" class="about"><font-awesome-icon class="nav-icon" icon="fa-solid fa-user" /> {{ about }} </a>
       </li>
-      <li class="nav__item portfolio">
+      <li class="nav__item">
         <!-- prettier-ignore -->
-        <font-awesome-icon class="nav-icon" icon="fa-solid fa-code" />
-        <a href="#portfolio"> {{ portfolio }} </a>
+        <a href="#portfolio" class="portfolio"><font-awesome-icon class="nav-icon" icon="fa-solid fa-code" /> {{ portfolio }} </a>
       </li>
-      <li class="nav__item contact">
+      <li class="nav__item">
         <!-- prettier-ignore -->
-        <font-awesome-icon class="nav-icon" icon="fa-regular fa-address-card" />
-        <a href="#contact"> {{ contact }} </a>
+        <a href="#contact" class="contact"><font-awesome-icon class="nav-icon" icon="fa-regular fa-address-card" /> {{ contact }} </a>
       </li>
     </ul>
   </nav>
@@ -80,7 +76,7 @@ a {
   margin-right: 8px;
 }
 
-.active > * {
+.active {
   color: $color_main;
 
   .nav-icon {
