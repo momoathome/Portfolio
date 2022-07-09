@@ -1,15 +1,23 @@
 <template>
   <section id="hero" class="hero-section">
     <div class="heading-container">
-      <h1 class="heading">Maurice Knoll</h1>
-      <h2 class="sub-heading">Ich bin <span>Web Entwickler</span></h2>
+      <div class="headings">
+        <h1 class="heading">Maurice Knoll</h1>
+        <h2 class="sub-heading">Ich bin <span>Web Entwickler</span></h2>
 
-      <div class="hero-buttons">
+        <div class="hero-buttons">
+          <a href="#about">
+            <Button> Über Mich </Button>
+          </a>
+          <a href="#contact">
+            <Button :class="'btn-outline'"> Kontakt </Button>
+          </a>
+        </div>
+      </div>
+
+      <div class="scrollDownContainer">
         <a href="#about">
-          <Button> Über Mich </Button>
-        </a>
-        <a href="#contact">
-          <Button :class="'btn-outline'"> Kontakt </Button>
+          <ScrolDownButton class="scrollDownButton" />
         </a>
       </div>
     </div>
@@ -31,10 +39,23 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+
+  & > :first-child {
+    flex-grow: 1;
+  }
+
+  & > :last-child {
+    margin-bottom: 1rem;
+  }
+}
+
+.headings {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
 .heading {
   font-size: calc(3rem + 1.5vw);
   font-weight: bold;
@@ -55,7 +76,6 @@
 
 .hero-buttons {
   width: 300px;
-  margin-bottom: 6rem;
   display: flex;
   justify-content: space-around;
 }
