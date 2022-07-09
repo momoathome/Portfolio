@@ -1,0 +1,10 @@
+{
+  "node_modules/nuxt/dist/app/entry.mjs": {
+    "file": "entry-438334e2.mjs",
+    "src": "node_modules/nuxt/dist/app/entry.mjs",
+    "isEntry": true,
+    "css": [
+      "entry.2670d9a0.css"
+    ]
+  }
+}
