@@ -22,10 +22,10 @@
           <template #header-img>
             <font-awesome-icon :class="'icon'" icon="fa-solid fa-phone" />
           </template>
-          <template #card-title> telefonier mit mir</template>
+          <template #card-title> telefoniere mit mir</template>
           <template #card-content>
-            Du magst lieber den persönlichen Kontakt? <br />
-            Kein Problem! Ruf mich direkt an
+            Du suchst den persönlichen Kontakt? <br />
+            Kein Problem! Rufe mich direkt an
           </template>
           <template #card-footer>
             <a href="tel:+4915172745427">
