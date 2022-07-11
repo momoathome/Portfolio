@@ -125,7 +125,7 @@ a {
 hr {
   border-color: $color_main_darker;
   margin-block: 2rem;
-  max-width: 100%;
+  width: 100%;
 }
 
 h1,
