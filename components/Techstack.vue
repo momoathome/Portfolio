@@ -93,8 +93,10 @@
     height: 32px;
     transition: 0.15s;
 
-    &:hover {
-      transform: translateY(-0.25rem);
+    @media (hover: hover) {
+      &:hover {
+        transform: translateY(-0.25rem);
+      }
     }
   }
 }

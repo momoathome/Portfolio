@@ -30,6 +30,7 @@ const props = defineProps({
 .detail span,
 a {
   margin-left: 10px;
+  vertical-align: top;
 }
 
 .icon {

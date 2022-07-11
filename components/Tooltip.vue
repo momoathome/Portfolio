@@ -60,7 +60,9 @@ const props = defineProps({
   left: 105%;
 }
 
-.tooltip:hover .tooltiptext {
-  visibility: visible;
+@media (hover: hover) {
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
 }
 </style>

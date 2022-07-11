@@ -3,7 +3,7 @@
   <h4 class="about-heading">Ich bin Maurice Knoll</h4>
   <h5 class="color-main about-heading-sub">
     <span><font-awesome-icon class="color-main" icon="fa-solid fa-code" /></span>
-    WebEntwickler
+    Web-Entwickler
   </h5>
 
   <p class="about-text">

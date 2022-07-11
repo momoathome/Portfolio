@@ -3,7 +3,7 @@
     <div class="heading-container">
       <div class="headings">
         <h1 class="heading">Maurice Knoll</h1>
-        <h2 class="sub-heading">Ich bin <span>Web Entwickler</span></h2>
+        <h2 class="sub-heading">Ich bin <span>Web-Entwickler</span></h2>
 
         <div class="hero-buttons">
           <a href="#about">
