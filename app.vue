@@ -169,6 +169,14 @@ p {
   border: 0px none $color_main;
 }
 
+@media (min-width: 1024px) {
+  .section {
+    &:nth-child(2) {
+      padding-top: 7rem;
+    }
+  }
+}
+
 @media (min-width: 1200px) {
   .container {
     width: 1140px;
