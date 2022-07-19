@@ -65,7 +65,7 @@
 
 @media (min-width: 1200px) {
   .grid {
-    gap: 7%;
+    column-gap: 7%;
   }
 }
 </style>

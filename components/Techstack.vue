@@ -75,12 +75,14 @@
 @media (min-width: 768px) {
   .techstack-container {
     grid-template-columns: repeat(3, 1fr);
+    column-gap: 3rem;
   }
 }
 
 @media (min-width: 1024px) {
   .techstack-container {
     margin-inline-start: 7%;
+    column-gap: 0;
   }
 }
 .icons {

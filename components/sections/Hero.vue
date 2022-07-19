@@ -98,4 +98,9 @@
     height: 100vh;
   }
 }
+@media (min-width: 1024px) and (min-height: 1100px) {
+  .hero-section {
+    height: 60vh;
+  }
+}
 </style>

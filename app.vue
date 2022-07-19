@@ -86,12 +86,12 @@ a {
     color: $color_grey;
   }
   .color-link {
-    color: #2079c7;
+    color: $color_link;
   }
 }
 
 .color-link {
-  color: #2079c7;
+  color: $color_link;
 }
 
 .section-heading {
@@ -119,7 +119,11 @@ a {
   min-height: 100vh;
   background-color: $color_dark;
   color: $color_white;
-  padding-top: 4rem;
+  padding-bottom: 7rem;
+
+  &:nth-child(2) {
+    padding-top: 4rem;
+  }
 }
 
 hr {
@@ -147,7 +151,7 @@ p {
 /* Firefox */
 * {
   scrollbar-width: auto;
-  scrollbar-color: #16c0f0 #1e2224;
+  scrollbar-color: $color_main #1e2224;
 }
 
 /* Chrome, Edge, and Safari */
@@ -160,17 +164,20 @@ p {
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #16c0f0;
+  background-color: $color_main;
   border-radius: 10px;
-  border: 0px none #16c0f0;
+  border: 0px none $color_main;
 }
 
 @media (min-width: 1200px) {
   .container {
     width: 1140px;
   }
+}
+
+@media (min-width: 1024px) and (min-height: 1100px) {
   .section {
-    padding-top: 7rem;
+    min-height: 75vh;
   }
 }
 </style>
