@@ -119,10 +119,10 @@ a {
   min-height: 100vh;
   background-color: $color_dark;
   color: $color_white;
-  padding-bottom: 7rem;
+  padding-bottom: min(7rem, 10vh);
 
   &:nth-child(2) {
-    padding-top: 4rem;
+    padding-top: min(7rem, 10vh);
   }
 }
 
@@ -169,14 +169,6 @@ p {
   border: 0px none $color_main;
 }
 
-@media (min-width: 1024px) {
-  .section {
-    &:nth-child(2) {
-      padding-top: 7rem;
-    }
-  }
-}
-
 @media (min-width: 1200px) {
   .container {
     width: 1140px;
@@ -185,7 +177,7 @@ p {
 
 @media (min-width: 1024px) and (min-height: 1100px) {
   .section {
-    min-height: 75vh;
+    min-height: 70vh;
   }
 }
 </style>
