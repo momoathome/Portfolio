@@ -10,9 +10,9 @@
     "build": "nuxt build"
   },
   "devDependencies": {
-    "nuxt": "3.0.0-rc.4",
+    "nuxt": "3.0.0-rc.6",
     "push-dir": "^0.4.1",
-    "sass": "^1.53.0",
+    "sass": "^1.54.0",
     "sass-loader": "^13.0.2"
   },
   "dependencies": {
@@ -20,7 +20,6 @@
     "@fortawesome/free-regular-svg-icons": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@fortawesome/vue-fontawesome": "^3.0.1",
-    "@nuxtjs/axios": "^5.13.6",
-    "nuxt-mail": "^3.0.23"
+    "@nuxtjs/axios": "^5.13.6"
   }
 }

@@ -11,9 +11,7 @@
 </template>
 
 <script setup lang="ts">
-import {ref, onMounted} from 'vue'
-
-const renderNav = ref(false)
+const renderNav = false
 
 // smooth scroll on click at Nav Link
 const root = ref(null)

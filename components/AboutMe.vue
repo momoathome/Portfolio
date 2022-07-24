@@ -20,45 +20,63 @@
 
   <div class="details-container">
     <div class="details-block col-1">
-      <AboutMeDetail title="über mich" position="top" content="Maurice Knoll - 26">
-        <font-awesome-icon icon="fa-solid fa-user" />
+      <AboutMeDetail title="über mich" position="top">
+        <template #icon>
+          <font-awesome-icon icon="fa-solid fa-user" />
+        </template>
+
+        Maurice Knoll - 26
       </AboutMeDetail>
 
-      <AboutMeDetail title="Wohnort" position="left" content="Bayern, Deutschland">
-        <font-awesome-icon icon="fa-solid fa-location-dot" />
+      <AboutMeDetail title="Wohnort" position="left">
+        <template #icon>
+          <font-awesome-icon icon="fa-solid fa-location-dot" />
+        </template>
+
+        Bayern, Deutschland
       </AboutMeDetail>
 
-      <AboutMeDetail title="Sprachen" position="bottom" content="Deutsch, Englisch">
-        <font-awesome-icon icon="fa-solid fa-language" />
+      <AboutMeDetail title="Sprachen" position="bottom">
+        <template #icon>
+          <font-awesome-icon icon="fa-solid fa-language" />
+        </template>
+
+        Deutsch, Englisch
       </AboutMeDetail>
     </div>
 
     <div class="details-block col-2">
-      <AboutMeDetail
-        title="telefon"
-        position="top"
-        :contentIsHtml="true"
-        content="<a href='tel:+4915172745427' class='color-link link-active'>+4915172745427</a>"
-      >
-        <font-awesome-icon icon="fa-solid fa-phone" />
+      <AboutMeDetail title="telefon" position="top">
+        <template #icon>
+          <font-awesome-icon icon="fa-solid fa-phone" />
+        </template>
+
+        <a href="tel:+4915172745427" class="color-link link-active">+49 151 72745427</a>
       </AboutMeDetail>
 
-      <AboutMeDetail
-        title="Email"
-        position="left"
-        :contentIsHtml="true"
-        content="<a href='mailto:mknoll1901@gmail.com' class='color-link link-active'>mknoll1901@gmail.com </a>"
-      >
-        <font-awesome-icon icon="fa-solid fa-envelope" />
+      <AboutMeDetail title="Email" position="left">
+        <template #icon>
+          <font-awesome-icon icon="fa-solid fa-envelope" />
+        </template>
+
+        <a href="mailto:mknoll1901@gmail.com" class="color-link link-active">
+          mknoll1901@gmail.com
+        </a>
       </AboutMeDetail>
 
-      <AboutMeDetail
-        title="github"
-        position="bottom"
-        :contentIsHtml="true"
-        content="<a href='https://github.com/momoathome' target='_blank' rel='noopener noreferrer' class='color-link link-active'>github.com/momoathome</a>"
-      >
-        <font-awesome-icon icon="fa-solid fa-link" />
+      <AboutMeDetail title="github" position="bottom">
+        <template #icon>
+          <font-awesome-icon icon="fa-solid fa-link" />
+        </template>
+
+        <a
+          href="https://github.com/momoathome"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="color-link link-active"
+        >
+          github.com/momoathome
+        </a>
       </AboutMeDetail>
     </div>
   </div>

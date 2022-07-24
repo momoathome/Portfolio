@@ -2,35 +2,33 @@
   <div class="detail color-main">
     <tooltip :title="props.title" :position="props.position">
       <div class="icon">
-        <slot></slot>
+        <slot name="icon"></slot>
       </div>
     </tooltip>
-    <span v-if="contentIsHtml" v-html="props.content"> </span>
-    <span v-else>{{ props.content }}</span>
+
+    <span class="content">
+      <slot></slot>
+    </span>
   </div>
 </template>
 
 <script setup lang="ts">
 const props = defineProps({
   title: String,
-  content: String,
-  icon: String,
   position: {
     type: String,
     default: 'bottom',
   },
-  contentIsHtml: {
-    type: Boolean,
-    default: false,
-  },
 })
 </script>
 
-<style scoped>
-.detail span,
-a {
-  margin-left: 10px;
-  vertical-align: top;
+<style lang="scss" scoped>
+.detail {
+  & span,
+  a {
+    margin-left: 10px;
+    vertical-align: top;
+  }
 }
 
 .icon {
