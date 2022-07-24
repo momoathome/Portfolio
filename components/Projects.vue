@@ -1,11 +1,37 @@
 <template>
   <div class="grid">
     <NuxtLink
+      href="https://momoathome.github.io/Pokedex/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <div class="item">
+        <img src="/img/Pokedex.webp" alt="" />
+        <div class="overlay">
+          <p class="item-title">Pokedex</p>
+          <p class="item-category">Solo Project: Frontend</p>
+          <p class="item-text">Techstack: Vue.js, Scss, PokeApi</p>
+        </div>
+      </div>
+    </NuxtLink>
+
+    <NuxtLink href="/">
+      <div class="item">
+        <img src="/img/Portfolio.webp" alt="" />
+        <div class="overlay">
+          <p class="item-title">Portfolio Website</p>
+          <p class="item-category">Solo Projekt: Frontend</p>
+          <p class="item-text">Techstack: Nuxt.js, Vue.js, Scss</p>
+        </div>
+      </div>
+    </NuxtLink>
+
+    <NuxtLink
       href="https://demo.novis-cms.com/"
       target="_blank"
       rel="noopener noreferrer"
     >
-      <div class="item div1">
+      <div class="item">
         <img src="/img/Novis-cms.webp" alt="" />
         <div class="overlay">
           <p class="item-title">NovisCMS</p>
@@ -16,42 +42,16 @@
     </NuxtLink>
 
     <NuxtLink
-      href="https://momoathome.github.io/Pokedex/"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <div class="item div2">
-        <img src="/img/Pokedex.webp" alt="" />
-        <div class="overlay">
-          <p class="item-title">Pokedex</p>
-          <p class="item-category">Solo Project: Frontend</p>
-          <p class="item-text">Techstack: Vue.js, Scss, PokeApi</p>
-        </div>
-      </div>
-    </NuxtLink>
-
-    <NuxtLink
       href="https://momoathome.github.io/projektCiara/"
       target="_blank"
       rel="noopener noreferrer"
     >
-      <div class="item div3">
+      <div class="item">
         <img src="/img/Project-ciara.webp" alt="" />
         <div class="overlay">
           <p class="item-title">Project Ciara</p>
           <p class="item-category">Solo Projekt: Browsergame (in Progress)</p>
           <p class="item-text">Techstack: Html, Scss, Javascript</p>
-        </div>
-      </div>
-    </NuxtLink>
-
-    <NuxtLink href="/">
-      <div class="item div4">
-        <img src="/img/Portfolio.webp" alt="" />
-        <div class="overlay">
-          <p class="item-title">Portfolio Website</p>
-          <p class="item-category">Solo Projekt: Frontend</p>
-          <p class="item-text">Techstack: Nuxt.js, Vue.js, Scss</p>
         </div>
       </div>
     </NuxtLink>
@@ -115,6 +115,8 @@ img {
   .item {
     position: relative;
     overflow: hidden;
+    display: block;
+    gap: 0;
 
     &:hover {
       .overlay {
