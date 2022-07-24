@@ -11,7 +11,7 @@
 </template>
 
 <script setup lang="ts">
-const renderNav = false
+const renderNav = ref(false)
 
 // smooth scroll on click at Nav Link
 const root = ref(null)
@@ -44,15 +44,16 @@ onMounted(() => {
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700&display=swap');
 
 * {
+  font-family: 'Roboto Slab', serif;
   box-sizing: border-box;
-  //transition: all 0.3s;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 body {
   margin: 0;
-  font-family: 'Roboto Slab', serif;
 }
 
 a {
