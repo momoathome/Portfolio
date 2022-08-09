@@ -2,7 +2,7 @@
   <div class="card">
     <div class="header">
       <div class="header_img">
-        <slot name="header-img"> </slot>
+        <slot name="header-img"></slot>
       </div>
       <h4 class="card_title">
         <slot name="card-title"></slot>

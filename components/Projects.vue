@@ -115,7 +115,7 @@ img {
   .item {
     position: relative;
     overflow: hidden;
-    display: block;
+    display: flex;
     gap: 0;
 
     &:hover {

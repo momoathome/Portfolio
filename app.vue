@@ -5,6 +5,7 @@
   <main ref="root">
     <SectionsHero />
     <SectionsAbout />
+    <SectionsTechstack />
     <SectionsPortfolio />
     <SectionsKontakt />
   </main>
@@ -122,6 +123,7 @@ a {
 
   &:nth-child(2) {
     padding-top: min(7rem, 10vh);
+    min-height: 90vh;
   }
 }
 

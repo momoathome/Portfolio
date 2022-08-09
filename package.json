@@ -10,16 +10,15 @@
     "build": "nuxt build"
   },
   "devDependencies": {
+    "@unocss/nuxt": "^0.45.5",
     "nuxt": "3.0.0-rc.6",
     "push-dir": "^0.4.1",
     "sass": "^1.54.0",
     "sass-loader": "^13.0.2"
   },
   "dependencies": {
-    "@fortawesome/free-brands-svg-icons": "^6.1.1",
-    "@fortawesome/free-regular-svg-icons": "^6.1.1",
-    "@fortawesome/free-solid-svg-icons": "^6.1.1",
-    "@fortawesome/vue-fontawesome": "^3.0.1",
-    "@nuxtjs/axios": "^5.13.6"
+    "@iconify-json/fa-brands": "^1.1.2",
+    "@iconify-json/fa6-solid": "^1.1.6",
+    "@iconify-json/simple-icons": "^1.1.21"
   }
 }

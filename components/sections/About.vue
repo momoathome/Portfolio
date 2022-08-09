@@ -8,10 +8,6 @@
         <div class="grid-about">
           <AboutMe />
         </div>
-        <hr />
-        <div class="grid-techstack">
-          <Techstack />
-        </div>
       </div>
     </div>
   </section>

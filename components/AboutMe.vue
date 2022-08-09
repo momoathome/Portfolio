@@ -2,7 +2,7 @@
   <h3 class="section-heading">Über Mich</h3>
   <h4 class="about-heading">Ich bin Maurice Knoll</h4>
   <h5 class="color-main about-heading-sub">
-    <span><font-awesome-icon class="color-main" icon="fa-solid fa-code" /></span>
+    <div class="color-main text-2xl" i-fa6-solid-code />
     Web-Entwickler
   </h5>
 
@@ -22,7 +22,7 @@
     <div class="details-block col-1">
       <AboutMeDetail title="über mich" position="top">
         <template #icon>
-          <font-awesome-icon icon="fa-solid fa-user" />
+          <div class="text-lg" i-fa6-solid-user />
         </template>
 
         Maurice Knoll - 26
@@ -30,7 +30,7 @@
 
       <AboutMeDetail title="Wohnort" position="left">
         <template #icon>
-          <font-awesome-icon icon="fa-solid fa-location-dot" />
+          <div class="text-lg" i-fa6-solid-location-dot />
         </template>
 
         Bayern, Deutschland
@@ -38,7 +38,7 @@
 
       <AboutMeDetail title="Sprachen" position="bottom">
         <template #icon>
-          <font-awesome-icon icon="fa-solid fa-language" />
+          <div class="text-lg" i-fa6-solid-language />
         </template>
 
         Deutsch, Englisch
@@ -48,7 +48,7 @@
     <div class="details-block col-2">
       <AboutMeDetail title="telefon" position="top">
         <template #icon>
-          <font-awesome-icon icon="fa-solid fa-phone" />
+          <div class="text-lg" i-fa6-solid-phone />
         </template>
 
         <a href="tel:+4915172745427" class="color-link link-active">+49 151 72745427</a>
@@ -56,7 +56,7 @@
 
       <AboutMeDetail title="Email" position="left">
         <template #icon>
-          <font-awesome-icon icon="fa-solid fa-envelope" />
+          <div class="text-lg" i-fa6-solid-envelope />
         </template>
 
         <a href="mailto:mknoll1901@gmail.com" class="color-link link-active">
@@ -66,7 +66,7 @@
 
       <AboutMeDetail title="github" position="bottom">
         <template #icon>
-          <font-awesome-icon icon="fa-solid fa-link" />
+          <div class="text-lg" i-fa6-solid-link />
         </template>
 
         <a
@@ -92,6 +92,11 @@
 .about-heading-sub {
   font-size: 1.25rem;
   margin-bottom: 1.5rem;
+  display: flex;
+
+  div {
+    margin-inline-end: 0.5rem;
+  }
 }
 
 a {

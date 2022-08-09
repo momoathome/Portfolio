@@ -1,27 +1,42 @@
-import { defineNuxtConfig } from 'nuxt'
+import {defineNuxtConfig} from 'nuxt'
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  nitro: {
-    preset: 'Netlify'
+  app: {
+    head: {
+      title: 'Maurice Knoll Portfolio',
+      titleTemplate: '%s - Maurice Knoll Portfolio',
+      meta: [
+        {name: 'viewport', content: 'width=device-width, initial-scale=1'},
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Maurice Knoll Portfolio',
+        },
+      ],
+    },
   },
-  css: [
-    '@fortawesome/fontawesome-svg-core/styles.css'
-  ],
+  nitro: {
+    preset: 'Netlify',
+  },
+  css: [],
   vite: {
     css: {
-        preprocessorOptions: {
-            scss: {
-                additionalData: '@import "@/assets/main.scss";',
-            },
+      preprocessorOptions: {
+        scss: {
+          additionalData: '@import "~/assets/main.scss";',
         },
+      },
     },
-},
-modules: [
-  
-],
+  },
+  modules: ['@unocss/nuxt'],
 
-plugins: [
+  plugins: [],
 
-]
+  unocss: {
+    // presets
+    uno: true, // enabled `@unocss/preset-uno`
+    icons: true, // enabled `@unocss/preset-icons`
+    attributify: true, // enabled `@unocss/preset-attributify`
+  },
 })

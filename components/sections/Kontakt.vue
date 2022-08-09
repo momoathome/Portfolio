@@ -5,7 +5,7 @@
       <div class="grid">
         <Card>
           <template #header-img>
-            <font-awesome-icon :class="'icon'" icon="fa-solid fa-envelope" />
+            <div class="icon" i-fa6-solid-envelope />
           </template>
           <template #card-title> sende mir eine E-Mail</template>
           <template #card-content>
@@ -20,7 +20,7 @@
         </Card>
         <Card>
           <template #header-img>
-            <font-awesome-icon :class="'icon'" icon="fa-solid fa-phone" />
+            <div class="icon" i-fa6-solid-phone />
           </template>
           <template #card-title> telefoniere mit mir</template>
           <template #card-content>
