@@ -68,18 +68,47 @@ img {
 .grid {
   row-gap: 2rem;
 }
-.overlay {
-  color: $color_grey;
-  transition: all 0.3s;
+
+.item {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  gap: 0;
+
+  .overlay {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: calc(100% - 18px);
+    height: 40%;
+    color: $color_grey;
+    transition: all 0.3s;
+    padding: 0.5rem 2rem 2rem 1rem;
+    margin-inline-start: 9px;
+    margin-block-end: 9px;
+    background-color: rgba(30, 34, 36, 0.8);
+
+    & > *:not(:last-child) {
+      margin-block: 0.25rem;
+    }
+  }
 
   .item-title {
+    top: 0;
     font-size: calc(1rem + 0.5vw);
     color: $color_white;
     transition: color 0.3s;
   }
 
-  & > *:not(:last-child) {
-    margin-block: 0.25rem;
+  .item-category {
+    display: flex;
+    top: 25%;
+  }
+
+  .item-text {
+    display: flex;
+    top: 50%;
   }
 }
 
@@ -113,38 +142,6 @@ img {
   }
 
   .item {
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    gap: 0;
-
-    .overlay {
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: calc(100% - 18px);
-      height: 40%;
-      padding: 0.5rem 2rem 2rem 1rem;
-      margin-inline-start: 9px;
-      margin-block-end: 9px;
-      background-color: rgba(30, 34, 36, 0.8);
-    }
-
-    .item-title {
-      top: 0;
-    }
-
-    .item-category {
-      display: flex;
-      top: 25%;
-    }
-
-    .item-text {
-      display: flex;
-      top: 50%;
-    }
-
     &:hover {
       scale: 1.025;
       box-shadow: 0px 16px 25px rgb(0 0 0 / 50%);
