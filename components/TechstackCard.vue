@@ -3,8 +3,7 @@
     <div class="card-header">
       <div
         :class="icon"
-        class="text-2xl tech-icon transition-color transition-duration-300"
-      />
+        class="text-2xl tech-icon transition-color transition-duration-300" />
       <h4 class="transition-color transition-duration-300">{{ title }}</h4>
     </div>
     <div class="card-body">
@@ -50,6 +49,7 @@ defineProps({
   .card-body {
     display: flex;
     flex-direction: column;
+    line-height: 1.5;
   }
   .card-footer {
     display: none;

@@ -6,19 +6,17 @@
     "dev": "nuxt dev",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup",
     "build": "nuxt build"
   },
   "devDependencies": {
-    "@unocss/nuxt": "^0.45.5",
-    "nuxt": "3.0.0-rc.6",
-    "push-dir": "^0.4.1",
-    "sass": "^1.54.0",
-    "sass-loader": "^13.0.2"
+    "@unocss/nuxt": "^0.46.5",
+    "nuxt": "3.0.0-rc.13",
+    "sass": "^1.56.1",
+    "sass-loader": "^13.2.0"
   },
   "dependencies": {
     "@iconify-json/fa-brands": "^1.1.2",
-    "@iconify-json/fa6-solid": "^1.1.6",
-    "@iconify-json/simple-icons": "^1.1.21"
+    "@iconify-json/fa6-solid": "^1.1.7",
+    "@iconify-json/simple-icons": "^1.1.34"
   }
 }
