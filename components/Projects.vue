@@ -3,8 +3,7 @@
     <NuxtLink
       href="https://momoathome.github.io/Pokedex/"
       target="_blank"
-      rel="noopener noreferrer"
-    >
+      rel="noopener noreferrer">
       <div class="item">
         <img src="/img/Pokedex.webp" alt="" />
         <div class="overlay">
@@ -29,8 +28,7 @@
     <NuxtLink
       href="https://demo.novis-cms.com/"
       target="_blank"
-      rel="noopener noreferrer"
-    >
+      rel="noopener noreferrer">
       <div class="item">
         <img src="/img/Novis-cms.webp" alt="" />
         <div class="overlay">
@@ -44,8 +42,7 @@
     <NuxtLink
       href="https://momoathome.github.io/projektCiara/"
       target="_blank"
-      rel="noopener noreferrer"
-    >
+      rel="noopener noreferrer">
       <div class="item">
         <img src="/img/Project-ciara.webp" alt="" />
         <div class="overlay">
@@ -76,12 +73,13 @@ img {
   transition: all 0.3s;
 
   .item-title {
-    color: $color_main;
     font-size: calc(1rem + 0.5vw);
+    color: $color_white;
+    transition: color 0.3s;
   }
 
   & > *:not(:last-child) {
-    margin-block: 0.5rem;
+    margin-block: 0.25rem;
   }
 }
 
@@ -89,6 +87,7 @@ img {
   .item {
     display: flex;
     gap: 1rem;
+    transition: all 0.3s;
   }
 
   img {
@@ -112,75 +111,51 @@ img {
     height: auto;
     border: 9px solid $color_darker;
   }
+
   .item {
+    width: 100%;
     position: relative;
     overflow: hidden;
     display: flex;
     gap: 0;
 
+    .overlay {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: calc(100% - 18px);
+      height: 40%;
+      padding: 0.5rem 2rem 2rem 1rem;
+      margin-inline-start: 9px;
+      margin-block-end: 9px;
+      background-color: rgba(30, 34, 36, 0.8);
+    }
+
+    .item-title {
+      top: 0;
+    }
+
+    .item-category {
+      display: flex;
+      top: 25%;
+    }
+
+    .item-text {
+      display: flex;
+      top: 50%;
+    }
+
     &:hover {
+      scale: 1.025;
+      box-shadow: 0px 16px 25px rgb(0 0 0 / 50%);
+
       .overlay {
-        visibility: visible;
-        transform: scale(1);
-        transition-duration: 0.6s;
+        height: 45%;
       }
-
       .item-title {
-        top: 35%;
-        visibility: visible;
-        opacity: 1;
-        transition-delay: 0.25s;
-      }
-
-      .item-category {
-        display: flex;
-        justify-content: center;
-        top: 50%;
         color: $color_main;
-        visibility: visible;
-        opacity: 1;
-        width: 65%;
-        transition-delay: 0.45s;
-      }
-
-      .item-text {
-        display: flex;
-        justify-content: center;
-        top: 63%;
-        color: $color_main;
-        visibility: visible;
-        opacity: 1;
-        width: 65%;
-        transition-delay: 0.55s;
       }
     }
-  }
-
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    visibility: hidden;
-    background-color: rgba(30, 34, 36, 0.9);
-    transform: scale(0);
-  }
-  .item-title,
-  .item-text,
-  .item-category {
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    display: inline-block;
-    color: $color_white;
-    margin: 0;
-    transform: translateX(-50%);
-    visibility: hidden;
-    opacity: 0;
-    transition: all 0.3s;
   }
 }
 
