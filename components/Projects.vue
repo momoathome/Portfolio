@@ -9,7 +9,7 @@
         <div class="overlay">
           <p class="item-title">Pokedex</p>
           <p class="item-category">Solo Project: Frontend</p>
-          <p class="item-text">Techstack: Vue.js, Scss, PokeApi</p>
+          <p class="item-text">Techstack: Vue, Scss, PokeApi</p>
         </div>
       </div>
     </NuxtLink>
@@ -20,7 +20,7 @@
         <div class="overlay">
           <p class="item-title">Portfolio Website</p>
           <p class="item-category">Solo Projekt: Frontend</p>
-          <p class="item-text">Techstack: Nuxt.js, Vue.js, Scss</p>
+          <p class="item-text">Techstack: Nuxt, Vue, Scss</p>
         </div>
       </div>
     </NuxtLink>
@@ -30,11 +30,11 @@
       target="_blank"
       rel="noopener noreferrer">
       <div class="item">
-        <img src="/img/Novis-cms.webp" alt="" />
+        <img src="/img/Novis_v2.webp" alt="" />
         <div class="overlay">
           <p class="item-title">NovisCMS</p>
           <p class="item-category">Team Projekt: Fullstack Application</p>
-          <p class="item-text">Techstack: Laravel, Sass, Bootsrap</p>
+          <p class="item-text">Techstack: Laravel, Nuxt, Vue, UnoCSS</p>
         </div>
       </div>
     </NuxtLink>

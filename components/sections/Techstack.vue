@@ -9,8 +9,7 @@
           :title="tech.title"
           :description="tech.description"
           :icon="tech.icon"
-          :link="tech.link"
-        />
+          :link="tech.link" />
       </div>
     </div>
   </section>
@@ -82,6 +81,12 @@ const techstack = ref([
       'Utility-first CSS framework for rapidly building custom user interfaces',
     icon: 'i-simple-icons-tailwindcss',
     link: 'https://tailwindcss.com/',
+  },
+  {
+    title: 'UnoCSS',
+    description: 'The instant on-demand Atomic CSS engine.',
+    icon: 'i-simple-icons-unocss',
+    link: 'https://github.com/unocss/unocss',
   },
   {
     title: 'Font Awesome',
