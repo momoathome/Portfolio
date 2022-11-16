@@ -26,7 +26,7 @@
     </NuxtLink>
 
     <NuxtLink
-      href="https://demo.novis-cms.com/"
+      href="https://novis-cms.com/"
       target="_blank"
       rel="noopener noreferrer">
       <div class="item">
@@ -47,7 +47,7 @@
         <img src="/img/Project-ciara.webp" alt="" />
         <div class="overlay">
           <p class="item-title">Project Ciara</p>
-          <p class="item-category">Solo Projekt: Browsergame (in Progress)</p>
+          <p class="item-category">Solo Projekt: Browsergame</p>
           <p class="item-text">Techstack: Html, Scss, Javascript</p>
         </div>
       </div>
