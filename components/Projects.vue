@@ -8,7 +8,7 @@
         <img src="/img/Pokedex.webp" alt="" />
         <div class="overlay">
           <p class="item-title">Pokedex</p>
-          <p class="item-category">Solo Project: Frontend</p>
+          <p class="item-category">Solo Projekt: Frontend</p>
           <p class="item-text">Techstack: Vue, Scss, PokeApi</p>
         </div>
       </div>
@@ -25,10 +25,7 @@
       </div>
     </NuxtLink>
 
-    <NuxtLink
-      href="https://novis-cms.com/"
-      target="_blank"
-      rel="noopener noreferrer">
+    <NuxtLink href="https://novis-cms.com/" target="_blank" rel="noopener noreferrer">
       <div class="item">
         <img src="/img/Novis_v2.webp" alt="" />
         <div class="overlay">

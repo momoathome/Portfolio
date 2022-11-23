@@ -41,6 +41,13 @@ const techstack = ref([
     link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
   },
   {
+    title: 'TypeScript',
+    description:
+      'TypeScript is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.',
+    icon: 'i-bxl-typescript',
+    link: 'https://www.typescriptlang.org/',
+  },
+  {
     title: 'Sass',
     description:
       'Syntactically awesome Style Sheets is an extension of CSS that enables you to use things like variables, nested rules, functions and more',
