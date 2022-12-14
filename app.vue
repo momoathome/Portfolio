@@ -1,7 +1,4 @@
 <template>
-  <header ref="header">
-    <TheNavigation v-if="renderNav" />
-  </header>
   <main ref="root">
     <SectionsHero />
     <SectionsAbout />
@@ -11,35 +8,7 @@
   </main>
 </template>
 
-<script setup lang="ts">
-const renderNav = ref(false)
-
-// smooth scroll on click at Nav Link
-const root = ref(null)
-const header = ref(null)
-
-onMounted(() => {
-  const sections = root.value.querySelectorAll('section')
-  const navLi = header.value.querySelectorAll('nav a')
-  window.onscroll = () => {
-    let current = ''
-
-    sections.forEach((section) => {
-      const sectionTop = section.offsetTop
-      if (scrollY >= sectionTop - 60) {
-        current = section.getAttribute('id')
-      }
-    })
-
-    navLi.forEach((el) => {
-      el.classList.remove('active')
-      if (el.classList.contains(current)) {
-        el.classList.add('active')
-      }
-    })
-  }
-})
-</script>
+<script setup lang="ts"></script>
 
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700&display=swap');
@@ -124,6 +93,11 @@ a {
   &:nth-child(2) {
     padding-top: min(7rem, 10vh);
     min-height: 90vh;
+  }
+
+  &:last-child {
+    padding-bottom: 0;
+    min-height: 80vh;
   }
 }
 

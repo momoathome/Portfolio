@@ -63,7 +63,7 @@ const detailsLeft = [
   },
   {
     title: 'Sprachen',
-    text: ' Deutsch, Englisch',
+    text: 'Deutsch, Englisch',
     icon: 'i-fa6-solid-language',
     link: '',
     position: 'bottom'
