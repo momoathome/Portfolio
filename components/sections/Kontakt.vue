@@ -11,6 +11,7 @@
           :icon="item.icon"
           :link="item.link"
           :buttonText="item.buttonText"
+          :btnOutline="item.btnOutline"
         />
       </div>
     </div>
@@ -18,23 +19,25 @@
 </template>
 
 <script setup lang="ts">
-const kontakt = ref([
+const kontakt = [
   {
     title: 'sende mir eine E-Mail',
     text: 'Sobald die E-Mail bei mir eingegangen ist, bearbeite ich diese zeitnah und melde mich bei dir',
     icon: 'i-fa6-solid-envelope',
     link: 'mailto:mknoll1901@gmail.com',
-    buttonText: 'E-Mail senden'
+    buttonText: 'E-Mail senden',
+    btnOutline: false
   },
   {
     title: 'telefoniere mit mir',
     text: 'Du suchst den persönlichen Kontakt? Kein Problem! Rufe mich direkt an',
     icon: 'i-fa6-solid-phone',
     link: 'tel:+4915172745427',
-    buttonText: 'anrufen'
+    buttonText: 'anrufen',
+    btnOutline: true
   }
 
-])
+]
 </script>
 
 <style lang="scss" scoped>

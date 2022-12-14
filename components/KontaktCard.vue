@@ -11,7 +11,8 @@
     </div>
     <div class="footer">
       <a :href="link">
-        <Button>{{ buttonText }}</Button>
+        <Button v-if="btnOutline" class="btn-outline">{{ buttonText }}</Button>
+        <Button v-else>{{ buttonText }}</Button>
       </a>
     </div>
   </div>
@@ -24,6 +25,7 @@ defineProps({
   icon: String,
   link: String,
   buttonText: String,
+  btnOutline: Boolean,
 })
 </script>
 

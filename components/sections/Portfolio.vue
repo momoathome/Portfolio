@@ -18,7 +18,7 @@
 </template>
 
 <script setup lang="ts">
-const projekts = ref([
+const projekts = [
   {
     title: 'Pokedex',
     category:'Solo Projekt: Frontend',
@@ -47,7 +47,7 @@ const projekts = ref([
     img: '/img/Project-ciara.webp',
     link: 'https://momoathome.github.io/projektCiara/',
   },
-])
+]
 </script>
 
 <style lang="scss" scoped>
