@@ -4,14 +4,10 @@
       <div class="header_img">
         <div class="icon" :class="icon"/>
       </div>
-      <h4 class="card_title">
-        {{ title }}
-      </h4>
+      <h4 class="card_title">{{ title }}</h4>
     </div>
     <div class="body">
-      <p class="content">
-        {{ text }}
-      </p>
+      <p class="content">{{ text }}</p>
     </div>
     <div class="footer">
       <a :href="link">
