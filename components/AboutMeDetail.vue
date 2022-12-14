@@ -52,8 +52,7 @@ a {
   color: $color_grey;
 }
 .detail {
-  & span,
-  a {
+  & span {
     margin-left: 10px;
     vertical-align: top;
   }
