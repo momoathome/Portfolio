@@ -2,7 +2,7 @@
   <h3 class="section-heading">Über Mich</h3>
   <h4 class="about-heading">Ich bin Maurice Knoll</h4>
   <h5 class="color-main about-heading-sub">
-    <div class="color-main text-2xl" i-fa6-solid-code />
+    <div class="text-2xl color-main" i-fa6-solid-code />
     Web-Entwickler
   </h5>
 
@@ -19,70 +19,83 @@
   <hr />
 
   <div class="details-container">
-    <div class="details-block col-1">
-      <AboutMeDetail title="über mich" position="top">
-        <template #icon>
-          <div class="text-lg" i-fa6-solid-user />
-        </template>
-
-        Maurice Knoll - 26
-      </AboutMeDetail>
-
-      <AboutMeDetail title="Wohnort" position="left">
-        <template #icon>
-          <div class="text-lg" i-fa6-solid-location-dot />
-        </template>
-
-        Bayern, Deutschland
-      </AboutMeDetail>
-
-      <AboutMeDetail title="Sprachen" position="bottom">
-        <template #icon>
-          <div class="text-lg" i-fa6-solid-language />
-        </template>
-
-        Deutsch, Englisch
-      </AboutMeDetail>
+    <div class="col-1 details-block">
+      <AboutMeDetail
+          v-for="item in detailsLeft"
+          :key="item.title"
+          :title="item.title"
+          :text="item.text"
+          :icon="item.icon"
+          :position="item.position"
+        />
     </div>
 
-    <div class="details-block col-2">
-      <AboutMeDetail title="telefon" position="top">
-        <template #icon>
-          <div class="text-lg" i-fa6-solid-phone />
-        </template>
-
-        <a href="tel:+4915172745427" class="color-link link-active">+49 151 72745427</a>
-      </AboutMeDetail>
-
-      <AboutMeDetail title="Email" position="left">
-        <template #icon>
-          <div class="text-lg" i-fa6-solid-envelope />
-        </template>
-
-        <a href="mailto:mknoll1901@gmail.com" class="color-link link-active">
-          mknoll1901@gmail.com
-        </a>
-      </AboutMeDetail>
-
-      <AboutMeDetail title="github" position="bottom">
-        <template #icon>
-          <div class="text-lg" i-fa6-solid-link />
-        </template>
-
-        <a
-          href="https://github.com/momoathome"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="color-link link-active"
-        >
-          github.com/momoathome
-        </a>
-      </AboutMeDetail>
+    <div class="col-2 details-block">
+      <AboutMeDetail
+          v-for="item in detailsRight"
+          :key="item.title"
+          :title="item.title"
+          :text="item.text"
+          :icon="item.icon"
+          :link="item.link"
+          :hasTarget="item.target"
+          :position="item.position"
+        />
     </div>
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const detailsLeft = [
+  {
+    title: 'über mich',
+    text: 'Maurice Knoll - 26',
+    icon: 'i-fa6-solid-user',
+    link: '',
+    position: 'top'
+  },
+  {
+    title: 'Wohnort',
+    text: 'Bayern, Deutschland',
+    icon: 'i-fa6-solid-location-dot',
+    link: '',
+    position: 'left'
+  },
+  {
+    title: 'Sprachen',
+    text: ' Deutsch, Englisch',
+    icon: 'i-fa6-solid-language',
+    link: '',
+    position: 'bottom'
+  }
+]
+const detailsRight = [
+{
+    title: 'telefon',
+    text: '+49 151 72745427',
+    icon: 'i-fa6-solid-phone',
+    link: 'tel:+4915172745427',
+    position: 'top',
+    target: false
+  },
+  {
+    title: 'Email',
+    text: 'mknoll1901@gmail.com',
+    icon: 'i-fa6-solid-envelope',
+    link: 'mailto:mknoll1901@gmail.com',
+    position: 'left',
+    target: false
+  },
+  {
+    title: 'github',
+    text: 'github.com/momoathome',
+    icon: 'i-fa6-solid-link',
+    link: 'https://github.com/momoathome',
+    position: 'bottom',
+    target: true
+  },
+]
+</script>
 
 <style lang="scss" scoped>
 .about-heading {
@@ -96,18 +109,6 @@
 
   div {
     margin-inline-end: 0.5rem;
-  }
-}
-
-a {
-  color: $color_grey;
-}
-.link-active {
-  position: relative;
-  transition: all 0.3s;
-
-  &:hover {
-    color: $color_main;
   }
 }
 

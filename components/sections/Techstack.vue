@@ -9,15 +9,14 @@
           :title="tech.title"
           :description="tech.description"
           :icon="tech.icon"
-          :link="tech.link" />
+          :link="tech.link"
+        />
       </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import {ref} from 'vue'
-
 const techstack = ref([
   {
     title: 'Html',

@@ -2,24 +2,34 @@
   <div class="card">
     <div class="header">
       <div class="header_img">
-        <slot name="header-img"></slot>
+        <div class="icon" :class="icon"/>
       </div>
       <h4 class="card_title">
-        <slot name="card-title"></slot>
+        {{ title }}
       </h4>
     </div>
     <div class="body">
       <p class="content">
-        <slot name="card-content"></slot>
+        {{ text }}
       </p>
     </div>
     <div class="footer">
-      <slot name="card-footer"></slot>
+      <a :href="link">
+        <Button>{{ buttonText }}</Button>
+      </a>
     </div>
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+defineProps({
+  title: String,
+  text: String,
+  icon: String,
+  link: String,
+  buttonText: String,
+})
+</script>
 
 <style lang="scss">
 .card {

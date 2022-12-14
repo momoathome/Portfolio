@@ -3,45 +3,38 @@
     <div class="container">
       <h3 class="section-heading">Kontakt</h3>
       <div class="grid">
-        <Card>
-          <template #header-img>
-            <div class="icon" i-fa6-solid-envelope />
-          </template>
-          <template #card-title> sende mir eine E-Mail</template>
-          <template #card-content>
-            Sobald die E-Mail bei mir eingegangen ist, bearbeite ich diese zeitnah und
-            melde mich bei dir
-          </template>
-          <template #card-footer>
-            <a href="mailto:mknoll1901@gmail.com">
-              <Button>E-Mail senden</Button>
-            </a>
-          </template>
-        </Card>
-        <Card>
-          <template #header-img>
-            <div class="icon" i-fa6-solid-phone />
-          </template>
-          <template #card-title> telefoniere mit mir</template>
-          <template #card-content>
-            Du suchst den persönlichen Kontakt? <br />
-            Kein Problem! Rufe mich direkt an
-          </template>
-          <template #card-footer>
-            <a href="tel:+4915172745427">
-              <Button :class="'btn-outline'">anrufen</Button>
-            </a>
-          </template>
-        </Card>
+        <KontaktCard
+          v-for="item in kontakt"
+          :key="item.title"
+          :title="item.title"
+          :text="item.text"
+          :icon="item.icon"
+          :link="item.link"
+          :buttonText="item.buttonText"
+        />
       </div>
     </div>
   </section>
 </template>
 
-<script setup>
-async function copy(s) {
-  await navigator.clipboard.writeText(s)
-}
+<script setup lang="ts">
+const kontakt = ref([
+  {
+    title: 'sende mir eine E-Mail',
+    text: 'Sobald die E-Mail bei mir eingegangen ist, bearbeite ich diese zeitnah und melde mich bei dir',
+    icon: 'i-fa6-solid-envelope',
+    link: 'mailto:mknoll1901@gmail.com',
+    buttonText: 'E-Mail senden'
+  },
+  {
+    title: 'telefoniere mit mir',
+    text: 'Du suchst den persönlichen Kontakt? Kein Problem! Rufe mich direkt an',
+    icon: 'i-fa6-solid-phone',
+    link: 'tel:+4915172745427',
+    buttonText: 'anrufen'
+  }
+
+])
 </script>
 
 <style lang="scss" scoped>

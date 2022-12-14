@@ -1,22 +1,16 @@
 <template>
-  <div class="techstack-card transition transition-duration-300">
+  <div class="transition transition-duration-300 techstack-card">
     <div class="card-header">
-      <div
-        :class="icon"
-        class="text-2xl tech-icon p-0 m-0 transition-color transition-duration-300" />
+      <div :class="icon" class="m-0 p-0 transition-color text-2xl transition-duration-300 tech-icon" />
       <h4 class="transition-color transition-duration-300">{{ title }}</h4>
     </div>
     <div class="card-body">
-      <p>
-        {{ description }}
-      </p>
+      <p>{{ description }}</p>
     </div>
     <div class="card-footer">
       <a :href="link" target="_blank" rel="noopener noreferrer" class="flex flex-col">
         <span class="transition-color transition-duration-300">erfahre mehr</span>
-        <span class="text-xs transition-color transition-duration-300"
-          >(externer link)</span
-        >
+        <span class="text-xs transition-color transition-duration-300">(externer link)</span>
       </a>
     </div>
   </div>
