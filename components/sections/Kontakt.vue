@@ -1,23 +1,3 @@
-<template>
-  <section id="contact" class="section">
-    <div class="container">
-      <h3 class="section-heading">Kontakt</h3>
-      <div class="grid">
-        <KontaktCard
-          v-for="item in kontakt"
-          :key="item.title"
-          :title="item.title"
-          :text="item.text"
-          :icon="item.icon"
-          :link="item.link"
-          :buttonText="item.buttonText"
-          :btnOutline="item.btnOutline"
-        />
-      </div>
-    </div>
-  </section>
-</template>
-
 <script setup lang="ts">
 const kontakt = [
   {
@@ -26,7 +6,7 @@ const kontakt = [
     icon: 'i-fa6-solid-envelope',
     link: 'mailto:mknoll1901@gmail.com',
     buttonText: 'E-Mail senden',
-    btnOutline: false
+    btnOutline: false,
   },
   {
     title: 'telefoniere mit mir',
@@ -34,11 +14,33 @@ const kontakt = [
     icon: 'i-fa6-solid-phone',
     link: 'tel:+4915172745427',
     buttonText: 'anrufen',
-    btnOutline: true
-  }
+    btnOutline: true,
+  },
 
 ]
 </script>
+
+<template>
+  <section id="contact" class="section">
+    <div class="container">
+      <h3 class="section-heading">
+        Kontakt
+      </h3>
+      <div class="grid">
+        <KontaktCard
+          v-for="item in kontakt"
+          :key="item.title"
+          :title="item.title"
+          :text="item.text"
+          :icon="item.icon"
+          :link="item.link"
+          :button-text="item.buttonText"
+          :btn-outline="item.btnOutline"
+        />
+      </div>
+    </div>
+  </section>
+</template>
 
 <style lang="scss" scoped>
 @media (min-width: 768px) {

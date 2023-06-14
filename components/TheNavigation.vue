@@ -1,3 +1,10 @@
+<script setup lang="ts">
+const home = 'Start'
+const about = 'Über mich'
+const portfolio = 'Mein Portfolio'
+const contact = 'Kontakt'
+</script>
+
 <template>
   <nav class="nav">
     <ul class="nav__wrapper">
@@ -20,13 +27,6 @@
     </ul>
   </nav>
 </template>
-
-<script setup lang="ts">
-const home = 'Start'
-const about = 'Über mich'
-const portfolio = 'Mein Portfolio'
-const contact = 'Kontakt'
-</script>
 
 <style lang="scss" scoped>
 .nav {
@@ -52,7 +52,7 @@ const contact = 'Kontakt'
 }
 
 a {
-  color: $color_white;
+  color: var(--color_white);
 }
 .nav__item {
   margin-block: 1.25rem;
@@ -60,27 +60,27 @@ a {
 
   &:hover {
     .nav-icon {
-      color: $color_main;
+      color: var(--color_main);
     }
 
     a {
-      color: $color_main;
+      color: var(--color_main);
     }
   }
 }
 
 .nav-icon {
-  color: $color_white;
+  color: var(--color_white);
   width: 18px;
   height: 18px;
   margin-right: 8px;
 }
 
 .active {
-  color: $color_main;
+  color: var(--color_main);
 
   .nav-icon {
-    color: $color_main;
+    color: var(--color_main);
   }
 }
 </style>

@@ -1,14 +1,14 @@
-<template>
-  <div class="scroll"></div>
-</template>
-
 <script setup lang="ts"></script>
+
+<template>
+  <div class="scroll" />
+</template>
 
 <style lang="scss" scoped>
 .scroll {
   width: 60px;
   height: 60px;
-  border: 2px solid $color_main;
+  border: 2px solid var(--color_main);
   border-radius: 50%;
   position: relative;
   animation: down 1.5s infinite;
@@ -22,8 +22,8 @@
     left: 18px;
     width: 18px;
     height: 18px;
-    border-left: 2px solid $color_main;
-    border-bottom: 2px solid $color_main;
+    border-left: 2px solid var(--color_main);
+    border-bottom: 2px solid var(--color_main);
     transform: rotate(-45deg);
   }
 }

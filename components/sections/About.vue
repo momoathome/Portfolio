@@ -1,9 +1,11 @@
+<script setup lang="ts"></script>
+
 <template>
   <section id="about" class="section">
     <div class="container">
       <div class="grid">
-        <div class="grid-img">
-          <img class="profil-img" src="/img/Profil-img.webp" alt="" />
+        <div class="flex grid-img justify-center">
+          <img class="profil-img" src="/img/Profil-img.webp" alt="">
         </div>
         <div class="grid-about">
           <AboutMe />
@@ -13,13 +15,7 @@
   </section>
 </template>
 
-<script setup lang="ts"></script>
-
 <style lang="scss" scoped>
-.grid-img {
-  display: flex;
-  justify-content: center;
-}
 .profil-img {
   outline: 9px solid #171818;
   outline-offset: -9px;
@@ -34,7 +30,6 @@
 
 @media (min-width: 1024px) {
   .grid {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
   }
@@ -54,7 +49,7 @@
   }
 
   .profil-img {
-    height: 28.5rem;
+    max-height: 30rem;
     width: auto;
   }
 }

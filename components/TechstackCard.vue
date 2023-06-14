@@ -1,8 +1,19 @@
+<script setup lang="ts">
+defineProps({
+  title: String,
+  description: String,
+  icon: String,
+  link: String,
+})
+</script>
+
 <template>
   <div class="transition transition-duration-300 techstack-card">
     <div class="card-header">
       <div :class="icon" class="m-0 p-0 transition-color text-2xl transition-duration-300 tech-icon" />
-      <h4 class="transition-color transition-duration-300">{{ title }}</h4>
+      <h4 class="m-0 transition-color transition-duration-300">
+        {{ title }}
+      </h4>
     </div>
     <div class="card-body">
       <p>{{ description }}</p>
@@ -15,15 +26,6 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-defineProps({
-  title: String,
-  description: String,
-  icon: String,
-  link: String,
-})
-</script>
 
 <style lang="scss" scoped>
 .techstack-card {
@@ -58,7 +60,7 @@ defineProps({
   p {
     margin-block: 1rem;
     font-size: 0.85rem;
-    color: $color-grey;
+    color: var(--color_grey);
     line-height: 1.5;
   }
 
@@ -73,18 +75,18 @@ defineProps({
 
     &:hover {
       box-shadow: 0px 16px 25px rgba(0, 0, 0, 0.5);
-      border: 1px solid $color_main;
+      border: 1px solid var(--color_main);
 
       span {
-        color: $color_main;
+        color: var(--color_main);
       }
       span:nth-of-type(2) {
-        color: $color_grey;
+        color: var(--color_grey);
       }
 
       .tech-icon,
       h4 {
-        color: $color_main;
+        color: var(--color_main);
       }
     }
 

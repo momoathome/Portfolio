@@ -1,16 +1,3 @@
-<template>
-    <NuxtLink :href="link" target="_blank" rel="noopener noreferrer">
-      <div class="item">
-        <img :src="img" alt="" />
-        <div class="overlay">
-          <p class="item-title">{{ title }}</p>
-          <p class="item-category">{{ category }}</p>
-          <p class="item-text">{{ text }}</p>
-        </div>
-      </div>
-    </NuxtLink>
-</template>
-
 <script setup lang="ts">
 defineProps({
   title: String,
@@ -21,15 +8,38 @@ defineProps({
 })
 </script>
 
+<template>
+  <NuxtLink :href="link" target="_blank" rel="noopener noreferrer">
+    <div class="item">
+      <img :src="img" alt="">
+      <div class="overlay">
+        <p class="item-title">
+          {{ title }}
+        </p>
+        <p class="item-category">
+          {{ category }}
+        </p>
+        <p class="item-text">
+          {{ text }}
+        </p>
+      </div>
+    </div>
+  </NuxtLink>
+</template>
+
 <style lang="scss" scoped>
 a:focus-visible {
-  outline: 1px solid $color_main;
+  outline: 1px solid var(--color_main);
+}
+
+p {
+  margin: 0;
 }
 
 img {
   width: 100%;
   height: auto;
-  border: 9px solid $color_darker;
+  border: 9px solid var(--color_darker);
   margin-top: 1rem;
 }
 
@@ -45,10 +55,10 @@ img {
     left: 0;
     bottom: 0;
     width: calc(100% - 18px);
-    height: 40%;
-    color: $color_grey;
+    height: 45%;
+    color: var(--color_grey);
     transition: all 0.3s;
-    padding: 0.5rem 2rem 2rem 1rem;
+    padding: 0 2rem 2rem 1rem;
     margin-inline-start: 9px;
     margin-block-end: 9px;
     background-color: rgba(30, 34, 36, 0.8);
@@ -61,7 +71,7 @@ img {
   .item-title {
     top: 0;
     font-size: calc(1rem + 0.5vw);
-    color: $color_white;
+    color: var(--color_white);
     transition: color 0.3s;
   }
 
@@ -86,7 +96,7 @@ img {
   img {
     width: 60%;
     height: auto;
-    border: 9px solid $color_darker;
+    border: 9px solid var(--color_darker);
     margin-top: 0;
   }
 }
@@ -95,7 +105,7 @@ img {
   img {
     width: 100%;
     height: auto;
-    border: 9px solid $color_darker;
+    border: 9px solid var(--color_darker);
   }
 
   .item {
@@ -107,7 +117,7 @@ img {
         height: 45%;
       }
       .item-title {
-        color: $color_main;
+        color: var(--color_main);
       }
     }
   }

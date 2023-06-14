@@ -1,0 +1,51 @@
+:root {
+  --color_main: rgb(22, 192, 240);
+  --color_white: rgb(255, 255, 255);
+  --color_grey: rgb(204, 204, 204);
+  --color_dark: rgb(30, 34, 36);
+  --color_darker: rgb(23, 24, 24);
+  --color_main_darker: rgba(22, 192, 240, 0.2);
+  --color_link: rgb(32, 121, 199);
+
+  font-family: 'Roboto Slab', serif;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-size: calc(3rem + 1.5vw);
+  font-weight: bold;
+  color: var(--color_white);
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: calc(1.25rem + 0.5vw);
+  font-weight: normal;
+  color: var(--color_grey);
+  text-align: center;
+  margin-bottom: 3rem;
+  margin-top: 0;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: var(--color_main) #1e2224;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #1e2224;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--color_main);
+  border-radius: 10px;
+  border: 0px none var(--color_main);
+}

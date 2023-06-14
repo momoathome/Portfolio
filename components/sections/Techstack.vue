@@ -1,21 +1,3 @@
-<template>
-  <section id="Techstack" class="section">
-    <div class="container">
-      <h3 class="section-heading">Mein Techstack</h3>
-      <div class="techstack-container">
-        <TechstackCard
-          v-for="tech in techstack"
-          :key="tech.title"
-          :title="tech.title"
-          :description="tech.description"
-          :icon="tech.icon"
-          :link="tech.link"
-        />
-      </div>
-    </div>
-  </section>
-</template>
-
 <script setup lang="ts">
 const techstack = ref([
   {
@@ -35,7 +17,7 @@ const techstack = ref([
   {
     title: 'JavaScript',
     description:
-      "Dynamic programming language that's used for web development. It allows you to implement dynamic features on web pages",
+      'Dynamic programming language that\'s used for web development. It allows you to implement dynamic features on web pages',
     icon: 'i-fa-brands-js-square',
     link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
   },
@@ -110,14 +92,14 @@ const techstack = ref([
   {
     title: 'Github',
     description:
-      "Web-based interface for git, to easily work with repo's and branches and create merges and pull request's",
+      'Web-based interface for git, to easily work with repo\'s and branches and create merges and pull request\'s',
     icon: 'i-fa-brands-github',
     link: 'https://github.com/',
   },
   {
     title: 'npm',
     description:
-      "The world's largest Software Library and also a software Package Manager and Installer",
+      'The world\'s largest Software Library and also a software Package Manager and Installer',
     icon: 'i-fa-brands-npm',
     link: 'https://www.npmjs.com/',
   },
@@ -129,6 +111,26 @@ const techstack = ref([
   },
 ])
 </script>
+
+<template>
+  <section id="Techstack" class="section">
+    <div class="container">
+      <h3 class="section-heading">
+        Mein Techstack
+      </h3>
+      <div class="techstack-container">
+        <TechstackCard
+          v-for="tech in techstack"
+          :key="tech.title"
+          :title="tech.title"
+          :description="tech.description"
+          :icon="tech.icon"
+          :link="tech.link"
+        />
+      </div>
+    </div>
+  </section>
+</template>
 
 <style lang="scss" scoped>
 .techstack-container {

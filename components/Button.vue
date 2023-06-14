@@ -1,17 +1,17 @@
+<script setup lang="ts"></script>
+
 <template>
   <button class="btn">
-    <slot></slot>
+    <slot />
   </button>
 </template>
-
-<script setup lang="ts"></script>
 
 <style lang="scss" scoped>
 .btn {
   width: 140px;
   padding: 10px 0;
-  background-color: $color_main;
-  color: $color_white;
+  background-color: var(--color_main);
+  color: var(--color_white);
   border: none;
   border-radius: 9999px;
   font-size: 1.25rem;
@@ -19,23 +19,23 @@
   transition: all 0.3s;
 
   &:focus-visible {
-    outline: 2px solid $color_white;
+    outline: 2px solid var(--color_white);
   }
 }
 .btn-outline {
   background-color: transparent;
-  border: 1px solid $color_main;
-  color: $color_main;
+  border: 1px solid var(--color_main);
+  color: var(--color_main);
 
   &:hover {
-    background-color: $color_main;
-    color: $color_white;
+    background-color: var(--color_main);
+    color: var(--color_white);
   }
 
   &:focus-visible {
-    background-color: $color_main;
-    color: $color_white;
-    outline: 2px solid $color_white;
+    background-color: var(--color_main);
+    color: var(--color_white);
+    outline: 2px solid var(--color_white);
   }
 }
 

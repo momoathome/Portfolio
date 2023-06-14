@@ -1,23 +1,3 @@
-<template>
-  <div class="detail color-main">
-    <tooltip :title="props.title" :position="props.position">
-      <div class="icon" :class="props.icon" />
-    </tooltip>
-
-    <span class="content" v-if="isAnkerTagShown()">
-        <NuxtLink v-if="hasTarget" :href="props.link" target="_blank" rel="noopener noreferrer" class="color-link link-active"> 
-          {{ props.text }}
-        </NuxtLink>
-        <NuxtLink v-else :href="props.link" class="color-link link-active"> 
-          {{ props.text }}
-        </NuxtLink>
-    </span>
-    <span class="content" v-else>
-      {{ props.text }}
-    </span>
-  </div>
-</template>
-
 <script setup lang="ts">
 const props = defineProps({
   title: String,
@@ -32,37 +12,28 @@ const props = defineProps({
 })
 
 function isAnkerTagShown() {
-  if (props.link && props.link.length >= 2) {
+  if (props.link && props.link.length >= 2)
     return true
-  } else return false
+  else return false
 }
 </script>
 
-<style lang="scss" scoped>
-.link-active {
-  position: relative;
-  transition: all 0.3s;
+<template>
+  <div class="not-last-of-type:mb-4">
+    <tooltip :title="props.title" :position="props.position">
+      <div class="flex h-20px text-primary w-20px justify-center items-center" :class="props.icon" />
+    </tooltip>
 
-  &:hover {
-    color: $color_main;
-  }
-}
-
-a {
-  color: $color_grey;
-}
-.detail {
-  & span {
-    margin-left: 10px;
-    vertical-align: top;
-  }
-}
-
-.icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 20px;
-  height: 20px;
-}
-</style>
+    <span v-if="isAnkerTagShown()" class="align-top ms-10px">
+      <NuxtLink v-if="hasTarget" :href="props.link" target="_blank" rel="noopener noreferrer" class="text-secondary transition transition-duration-300 hover:text-primary">
+        {{ props.text }}
+      </NuxtLink>
+      <NuxtLink v-else :href="props.link" class="text-secondary transition transition-duration-300 hover:text-primary">
+        {{ props.text }}
+      </NuxtLink>
+    </span>
+    <span v-else class="text-base_grey align-top ms-10px">
+      {{ props.text }}
+    </span>
+  </div>
+</template>

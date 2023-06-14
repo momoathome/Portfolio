@@ -1,21 +1,27 @@
-<template>
-  <section id="hero" class="hero-section">
-    <div class="heading-container">
-      <div class="headings">
-        <h1 class="heading">Maurice Knoll</h1>
-        <h2 class="sub-heading">Ich bin <span>Web-Entwickler</span></h2>
+<script setup lang="ts"></script>
 
-        <div class="hero-buttons">
+<template>
+  <section id="hero" class="bg-image h-80vh">
+    <div class="flex flex-col h-full heading-container items-center">
+      <div class="flex flex-col flex-grow justify-center items-center">
+        <h1>
+          Maurice Knoll
+        </h1>
+        <h2>
+          Ich bin <span class="text-primary">Web-Entwickler</span>
+        </h2>
+
+        <div class="flex w-300px hero-buttons justify-around">
           <a href="#about">
             <Button> Über Mich </Button>
           </a>
           <a href="#contact">
-            <Button :class="'btn-outline'"> Kontakt </Button>
+            <Button class="btn-outline"> Kontakt </Button>
           </a>
         </div>
       </div>
 
-      <div class="scrollDownContainer">
+      <div class="mb-4">
         <a href="#about">
           <ScrolDownButton class="scrollDownButton" />
         </a>
@@ -24,83 +30,18 @@
   </section>
 </template>
 
-<script setup lang="ts"></script>
-
 <style lang="scss" scoped>
-.hero-section {
-  width: 100%;
-  height: 80vh;
+.bg-image {
   background-image: url('/img/Hero-Background.webp');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-.heading-container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  & > :first-child {
-    flex-grow: 1;
-  }
-
-  & > :last-child {
-    margin-bottom: 1rem;
-  }
-}
-
-.headings {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.heading {
-  font-size: calc(3rem + 1.5vw);
-  font-weight: bold;
-  color: $color_white;
-  margin-bottom: 2rem;
-}
-.sub-heading {
-  color: $color_grey;
-  text-align: center;
-  margin-bottom: 3rem;
-  font-size: calc(1.25rem + 0.5vw);
-  font-weight: normal;
-
-  span {
-    color: $color_main;
-  }
-}
-
-.hero-buttons {
-  width: 300px;
-  display: flex;
-  justify-content: space-around;
-}
 
 @media (min-width: 768px) {
-  .heading {
-    font-size: calc(4rem + 1.5vw);
-  }
-
-  .sub-heading {
-    font-size: calc(1.2rem + 0.5vw);
-  }
 
   .hero-buttons {
     width: 420px;
-  }
-}
-@media (min-width: 1024px) {
-  .hero-section {
-    height: 100vh;
-  }
-}
-@media (min-width: 1024px) and (min-height: 1100px) {
-  .hero-section {
-    height: 60vh;
   }
 }
 </style>

@@ -1,23 +1,3 @@
-<template>
-  <div class="card">
-    <div class="header">
-      <div class="header_img">
-        <div class="icon" :class="icon"/>
-      </div>
-      <h4 class="card_title">{{ title }}</h4>
-    </div>
-    <div class="body">
-      <p class="content">{{ text }}</p>
-    </div>
-    <div class="footer">
-      <a :href="link">
-        <Button v-if="btnOutline" class="btn-outline">{{ buttonText }}</Button>
-        <Button v-else>{{ buttonText }}</Button>
-      </a>
-    </div>
-  </div>
-</template>
-
 <script setup lang="ts">
 defineProps({
   title: String,
@@ -29,12 +9,36 @@ defineProps({
 })
 </script>
 
+<template>
+  <div class="card">
+    <div class="header">
+      <div class="header_img">
+        <div class="icon" :class="icon" />
+      </div>
+      <h4 class="card_title">
+        {{ title }}
+      </h4>
+    </div>
+    <div class="body">
+      <p class="content">
+        {{ text }}
+      </p>
+    </div>
+    <div class="footer">
+      <a :href="link">
+        <Button v-if="btnOutline" class="btn-outline">{{ buttonText }}</Button>
+        <Button v-else>{{ buttonText }}</Button>
+      </a>
+    </div>
+  </div>
+</template>
+
 <style lang="scss">
 .card {
-  background-color: $color_darker;
+  background-color: var(--color_darker);
   padding: 1rem;
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
-  border: 2px solid $color_darker;
+  border: 2px solid var(--color_darker);
   max-width: 28.5rem;
 
   &:first-of-type {
@@ -42,13 +46,13 @@ defineProps({
   }
   &:hover {
     .icon {
-      color: $color_main;
+      color: var(--color_main);
     }
   }
 
   .icon {
     font-size: 4rem;
-    color: $color_main;
+    color: var(--color_grey);
     transition: all 0.3s;
   }
 
@@ -71,7 +75,7 @@ defineProps({
   .content {
     font-size: 15px;
     text-align: center;
-    color: $color_grey;
+    color: var(--color_grey);
   }
 
   .footer {
@@ -83,7 +87,7 @@ defineProps({
 
     p {
       font-size: 14px;
-      color: $color_grey;
+      color: var(--color_grey);
     }
   }
 }
@@ -122,7 +126,7 @@ defineProps({
     }
 
     .icon {
-      color: lighten($color: $color_darker, $amount: 10%);
+      color: var(--color_dark);
     }
   }
 }

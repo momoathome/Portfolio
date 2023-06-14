@@ -1,12 +1,3 @@
-<template>
-  <div class="tooltip">
-    <slot></slot>
-    <span class="tooltiptext" :class="props.position">
-      {{ props.title }}
-    </span>
-  </div>
-</template>
-
 <script setup lang="ts">
 const props = defineProps({
   title: String,
@@ -17,6 +8,15 @@ const props = defineProps({
 })
 </script>
 
+<template>
+  <div class="tooltip">
+    <slot />
+    <span class="tooltiptext" :class="props.position">
+      {{ props.title }}
+    </span>
+  </div>
+</template>
+
 <style lang="scss" scoped>
 .tooltip {
   position: relative;
@@ -26,9 +26,9 @@ const props = defineProps({
 .tooltiptext {
   visibility: hidden;
   width: 100px;
-  background-color: $color_darker;
+  background-color: var(--color_darker);
   text-align: center;
-  color: $color_grey;
+  color: var(--color_grey);
   padding: 5px 0;
   border-radius: 6px;
   position: absolute;
